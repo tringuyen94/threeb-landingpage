@@ -162,6 +162,7 @@ body {
    flex-direction: column;
    align-items: center;
    margin-bottom: 57px;
+   padding-bottom: 100px;
    background: linear-gradient(180deg, #FFFFFF 18.37%, #E5F8FF 75.56%);
 }
 
