@@ -155,8 +155,10 @@ ANIMATION
 }
 
 
-/* #animation1 {} */
-
+#animation1 {
+   width: 549px;
+   height: 560px;
+}
 
 .hero_content {
    width: 527px;
@@ -328,6 +330,10 @@ ANIMATION
    margin-bottom: 85px;
 }
 
+#animation2 {
+   width: 421px;
+   height: 417px;
+}
 
 /* 
 ===================EARN===================
@@ -367,7 +373,7 @@ ANIMATION
 
 }
 
-.earn_title img {
+#animation3 {
    width: 421px;
    height: 473px;
    margin-bottom: 17px;
@@ -477,7 +483,7 @@ ANIMATION
    width: 100%;
 }
 
-.win_header img {
+#animation4 {
    width: 300px;
    height: 200px;
    margin-bottom: 43px;
@@ -597,7 +603,7 @@ ANIMATION
    margin-bottom: 24px;
 }
 
-#world img {
+#animation5 {
    width: 343px;
    height: 343px;
 }
