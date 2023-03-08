@@ -333,6 +333,8 @@ ANIMATION
 #animation2 {
    width: 421px;
    height: 417px;
+   scale: 2.3;
+   z-index: -1;
 }
 
 /* 
@@ -486,6 +488,7 @@ ANIMATION
 #animation4 {
    width: 300px;
    height: 200px;
+   scale: 2;
    margin-bottom: 43px;
 }
 
@@ -604,12 +607,9 @@ ANIMATION
 }
 
 #animation5 {
-   width: 343px;
-   height: 343px;
+   width: 489px;
+   height: 489px;
 }
-
-
-
 
 
 .infomation_container {
