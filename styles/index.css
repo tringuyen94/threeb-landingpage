@@ -36,15 +36,42 @@ body {
    font-size: 16px;
 }
 
+
 .title_h1 {
    color: #1F7499;
    font-weight: 500;
    font-size: 32px;
    margin-bottom: 26px;
+   animation: 2s slide-right ease;
 }
 
 .title_h1 span {
    color: #33C1FF;
+}
+
+
+/*  
+
+ANIMATION
+*/
+
+
+@keyframes slide-right {
+   from {
+      transform: translateX(-100px);
+      opacity: 0;
+   }
+
+   to {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+
+@keyframes rotateTitle {
+   to {
+      transform: rotate3d(0, 1, 0, 360deg);
+   }
 }
 
 
@@ -122,16 +149,14 @@ body {
    align-items: center;
    justify-content: center;
    background-image: url(../assets/images/bgHero.svg);
-   background-position: center;
+   background-position: bottom;
    background-size: cover;
    background-repeat: no-repeat;
 }
 
 
-#hero img {
-   width: 549px;
-   height: 560px;
-}
+/* #animation1 {} */
+
 
 .hero_content {
    width: 527px;
@@ -144,6 +169,7 @@ body {
    font-weight: 500;
    font-size: 40px;
    margin-bottom: 30px;
+   /* animation: rotateTitle 3s ease infinite; */
 }
 
 .hero_content p {
@@ -162,8 +188,22 @@ body {
    flex-direction: column;
    align-items: center;
    margin-bottom: 57px;
-   padding-bottom: 100px;
+   padding-bottom: 150px;
    background: linear-gradient(180deg, #FFFFFF 18.37%, #E5F8FF 75.56%);
+   position: relative;
+   overflow: hidden;
+}
+
+
+#user-and-stake::after {
+   content: '';
+   position: absolute;
+   width: 120%;
+   height: 5%;
+   bottom: -25px;
+   transform: rotate(-2deg);
+   background-color: white;
+
 }
 
 .user-and-stake__content {
@@ -177,7 +217,7 @@ body {
 }
 
 .user-and-stake__content img {
-   width: 174px;
+   width: 194px;
    height: 194px;
 }
 
@@ -288,11 +328,6 @@ body {
    margin-bottom: 85px;
 }
 
-#trade_anything img {
-   width: 421px;
-   height: 417px;
-   margin-right: 43px;
-}
 
 /* 
 ===================EARN===================
@@ -302,6 +337,34 @@ body {
    background-image: linear-gradient(180deg, #FFF5E7 20.77%, #E5F8FF 85.44%);
    margin-bottom: 2rem;
    padding-bottom: 80px;
+   position: relative;
+   z-index: 10;
+   overflow: hidden;
+}
+
+#earn::before {
+   content: '';
+   top: -30px;
+   left: -200px;
+   background-color: white;
+   position: absolute;
+   z-index: -10;
+   width: 120%;
+   height: 10%;
+   transform: rotate(-2deg);
+}
+
+#earn::after {
+   content: '';
+   left: -200px;
+   bottom: -30px;
+   background-color: white;
+   position: absolute;
+   z-index: -10;
+   width: 120%;
+   height: 10%;
+   transform: rotate(-2deg);
+
 }
 
 .earn_title img {
@@ -336,14 +399,13 @@ body {
 .top-farms_list {
    display: flex;
    flex-wrap: wrap;
-   margin-left: 140px;
-
+   margin-left: 170px;
 }
 
 #earn h2 {
    font-weight: 500;
    font-size: 24px;
-   margin-left: 150px;
+   margin-left: 180px;
 }
 
 
@@ -395,11 +457,12 @@ body {
 .win_content::before {
    content: '';
    position: absolute;
-   width: 40%;
-   height: 30%;
+   width: 36.3%;
+   height: 40%;
    z-index: 10;
+   /* right: ; */
    top: 0;
-   left: 215px;
+   left: 240px;
    background-image: url('../assets/images/prediction_overlay2.svg');
    background-repeat: no-repeat;
 }
@@ -440,7 +503,7 @@ body {
    position: absolute;
    width: 100%;
    top: 0;
-   left: 0;
+   right: 0;
    height: 30%;
    background-image: url('../assets/images/prediction_overla_1.svg');
    background-repeat: no-repeat;
@@ -642,6 +705,13 @@ footer ul li a img {
  ==================   MOBILE
    */
 @media screen and (max-width: 600px) {
+   button {
+      width: 150px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
 
    /* HEADER */
    #header {
@@ -683,6 +753,7 @@ footer ul li a img {
       flex-direction: column-reverse;
       padding: 0 16px;
       margin-bottom: 35px;
+      background-size: contain;
    }
 
    #hero img {
@@ -692,6 +763,7 @@ footer ul li a img {
 
    .hero_content {
       width: 100%;
+      padding-right: 20px;
    }
 
    .hero_content h1 {
@@ -702,7 +774,12 @@ footer ul li a img {
 
    .hero_content p {
       margin-bottom: 26px;
+      font-weight: 400;
+      font-size: 14px;
    }
+
+
+
 
 
    /* 
@@ -710,6 +787,14 @@ footer ul li a img {
    */
    #user-and-stake {
       padding: 0 16px;
+      padding-bottom: 70px;
+   }
+
+   #user-and-stake::after {
+      width: 110%;
+      height: 15%;
+      bottom: -86px;
+      transform: rotate(-10deg);
    }
 
    .user-and-stake__content {
@@ -799,7 +884,23 @@ footer ul li a img {
    */
    #earn {
       padding: 0 17px;
+      padding-bottom: 50px;
       margin-bottom: 2rem;
+   }
+
+   #earn::before {
+      width: 120%;
+      height: 14%;
+      left: -70px;
+      transform: rotate(-10deg);
+   }
+
+   #earn::after {
+      width: 120%;
+      height: 14%;
+      left: -70px;
+      bottom: -80px;
+      transform: rotate(-10deg);
    }
 
    .earn_title {
@@ -808,11 +909,9 @@ footer ul li a img {
       justify-content: flex-start;
    }
 
-
    .earn_title div {
       margin-right: 0;
    }
-
 
    .earn_title img {
       width: 179px;
@@ -830,7 +929,6 @@ footer ul li a img {
    }
 
    .top-farms_list {
-      flex-wrap: wrap;
       margin-left: 0;
    }
 
@@ -872,23 +970,39 @@ footer ul li a img {
       margin-bottom: 0;
    }
 
+
+   .win_content::before {
+      width: 80%;
+      height: 30%;
+      top: 100px;
+      left: 45px;
+   }
+
    .prediction_container {
       border-radius: 12px;
-      height: 294px;
       width: 327px;
+      height: auto;
       margin: 0 auto;
       margin-bottom: 2rem;
    }
 
+   .prediction_container::before {
+      left: 0;
+   }
+
+   .prediction_container::after {
+      height: 25%;
+   }
+
    .hat_img_container {
-      width: 70px;
-      height: 70px;
+      width: 64px;
+      height: 64px;
       margin-bottom: 24px;
    }
 
    .hat_img_container img {
-      width: 50px;
-      height: 50px;
+      width: 43px;
+      height: 43px;
    }
 
    .prediction_title h2 {
@@ -900,11 +1014,11 @@ footer ul li a img {
    .prediction_title p {
       font-weight: 400;
       font-size: 16px;
-
    }
 
    .btn-prediction {
       width: 158px;
+      z-index: 10;
       height: 48px;
       font-weight: 400;
       font-size: 16px;
@@ -943,6 +1057,11 @@ footer ul li a img {
       height: 343px;
       margin-bottom: 50px;
    }
+
+   .btn-buynow {
+      height: 38px;
+   }
+
 
 
    /* 
@@ -1054,7 +1173,3 @@ footer ul li a img {
       display: none;
    }
 }
-
-
-/*  
-*/
