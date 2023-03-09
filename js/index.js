@@ -33,3 +33,13 @@ const animation5 = bodymovin.loadAnimation({
    autoplay: true,
    path: '../assets/animations/animation_5.json'
 });
+
+const bottomNavigate = document.getElementsByClassName('footer-navigation_mobile')[0]
+window.addEventListener('scroll', (e) => {
+   if (window.scrollY > 4200) {
+      bottomNavigate.style.position = 'relative'
+   } else {
+      bottomNavigate.style.position = 'fixed'
+
+   }
+})

@@ -55,7 +55,6 @@ body {
 ANIMATION
 */
 
-
 @keyframes slide-right {
    from {
       transform: translateX(-100px);
@@ -68,11 +67,7 @@ ANIMATION
    }
 }
 
-@keyframes rotateTitle {
-   to {
-      transform: rotate3d(0, 1, 0, 360deg);
-   }
-}
+
 
 
 /* 
@@ -168,10 +163,9 @@ ANIMATION
 
 .hero_content h1 {
    color: #33C1FF;
-   font-weight: 500;
+   font-weight: 600;
    font-size: 40px;
    margin-bottom: 30px;
-   /* animation: rotateTitle 3s ease infinite; */
 }
 
 .hero_content p {
@@ -406,6 +400,7 @@ ANIMATION
    color: #33C1FF;
    margin-left: 22px;
    padding: 12px 24px;
+   width: auto;
 }
 
 .top-farms_list {
@@ -711,12 +706,14 @@ footer ul li a img {
  ==================   MOBILE
    */
 @media screen and (max-width: 600px) {
+   body {
+      overflow-x: hidden;
+   }
+
    button {
       width: 150px;
       height: 32px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      padding: 0;
    }
 
    /* HEADER */
@@ -759,7 +756,6 @@ footer ul li a img {
       flex-direction: column-reverse;
       padding: 0 16px;
       margin-bottom: 35px;
-      background-size: contain;
    }
 
    #animation1 {
@@ -905,7 +901,7 @@ footer ul li a img {
       width: 120%;
       height: 14%;
       left: -70px;
-      bottom: -80px;
+      bottom: -50px;
       transform: rotate(-10deg);
    }
 
@@ -931,9 +927,7 @@ footer ul li a img {
       margin-bottom: 48.5px;
    }
 
-   .earn_button-wrapper button {
-      width: 150px;
-   }
+
 
    .top-farms_list {
       margin-left: 0;
@@ -945,6 +939,10 @@ footer ul li a img {
       margin-left: 10px;
    }
 
+   .btn-aitradingbot {
+      width: auto;
+      padding: 0 24px;
+   }
 
 
 
@@ -1054,8 +1052,8 @@ footer ul li a img {
    .world_content p {
       font-weight: 400;
       font-size: 14px;
-      line-height: 24px;
       margin-bottom: 24px;
+      word-wrap: break-word;
    }
 
    #world img {
@@ -1068,11 +1066,9 @@ footer ul li a img {
       height: 38px;
    }
 
-
-
    /* 
       ROAD MAP
-      
+   
    */
    #road_map {
       padding: 0 16px;
@@ -1087,65 +1083,16 @@ footer ul li a img {
       width: 100%;
    }
 
-
-   /* #road_map h1 {
-      margin-bottom: 24px;
-   }
-
-   .road-map__content {
-      display: flex;
-      flex-direction: column;
-      margin-top: 100px;
-   }
-
-   .road-map__detail {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 100px;
-   }
-
-   .road-map__detail img {
-      position: absolute;
-      z-index: 1;
-      top: -38px;
-      left: -14px;
-      width: 111px;
-      height: 128px;
-   }
-
-   .year {
-      z-index: 2;
-   }
-
-   .year h1 {
-      font-weight: 600;
-      font-size: 32px;
-      color: #3E4552;
-   }
-
-
-
-   .target {
-      text-align: right;
-   }
-
-   .target li {
-      margin-bottom: 24px;
-      font-weight: 400;
-      font-size: 14px;
-      color: #3E4552
-   } */
-
-
    /* 
       FOOTER
    */
-
+   footer {
+      display: none;
+   }
 
    .footer-navigation_mobile {
       display: flex;
+      /* width: 80%; */
       width: 100%;
       height: 68px;
       justify-content: space-between;
@@ -1157,7 +1104,7 @@ footer ul li a img {
       position: fixed;
       bottom: 0;
       left: 0;
-      background-color: #FFFFFF;
+      background-color: white;
       z-index: 9999;
    }
 
@@ -1180,7 +1127,5 @@ footer ul li a img {
       color: #8F92A1;
    }
 
-   footer {
-      display: none;
-   }
+
 }
