@@ -397,6 +397,10 @@ ANIMATION
    margin-bottom: 3rem;
 }
 
+.earn_button-wrapper button {
+   text-transform: uppercase;
+}
+
 .btn-aitradingbot {
    background: #D6F3FF;
    color: #33C1FF;
@@ -420,7 +424,7 @@ ANIMATION
 .top-farms-item {
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
+   justify-content: space-around;
    width: 150px;
    height: 69px;
    margin: 14px;
@@ -438,11 +442,7 @@ ANIMATION
    font-size: 16px;
 }
 
-.top-farms-item .name_2 {
-   font-weight: 400;
-   font-size: 14px;
-   color: #8F92A1;
-}
+
 
 
 /* 
@@ -1153,7 +1153,12 @@ footer ul li a img {
       padding-top: 13px;
       padding-bottom: 60px;
       box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.1);
-      border-radius: 20px 20px 0px 0px
+      border-radius: 20px 20px 0px 0px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background-color: #FFFFFF;
+      z-index: 9999;
    }
 
    .footer-navigation_mobile li {
