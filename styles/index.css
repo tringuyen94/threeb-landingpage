@@ -30,6 +30,11 @@ button {
    cursor: pointer;
 }
 
+html,
+body {
+   max-width: 100%;
+   overflow-x: hidden;
+}
 
 body {
    font-family: 'Rubik', sans-serif;
@@ -342,6 +347,7 @@ ANIMATION
    position: relative;
    z-index: 10;
    overflow: hidden;
+   text-align: center;
 }
 
 #earn::before {
@@ -373,18 +379,16 @@ ANIMATION
    width: 421px;
    height: 473px;
    margin-bottom: 17px;
+   margin-left: 100px;
 }
 
 .earn_title {
    display: flex;
-   width: 100%;
    align-items: center;
    justify-content: center;
 }
 
-.earn_title div {
-   margin-right: 106px;
-}
+
 
 .earn_button-wrapper {
    display: flex;
@@ -406,13 +410,12 @@ ANIMATION
 .top-farms_list {
    display: flex;
    flex-wrap: wrap;
-   margin-left: 170px;
+   justify-content: center;
 }
 
 #earn h2 {
    font-weight: 500;
    font-size: 24px;
-   margin-left: 180px;
 }
 
 
@@ -706,9 +709,7 @@ footer ul li a img {
  ==================   MOBILE
    */
 @media screen and (max-width: 600px) {
-   body {
-      overflow-x: hidden;
-   }
+
 
    button {
       width: 150px;
@@ -925,6 +926,7 @@ footer ul li a img {
 
    .earn_button-wrapper {
       margin-bottom: 48.5px;
+      justify-content: center;
    }
 
 
@@ -935,7 +937,7 @@ footer ul li a img {
 
 
    #earn h2 {
-      font-size: 16px;
+      font-size: 18px;
       margin-left: 10px;
    }
 
@@ -976,10 +978,10 @@ footer ul li a img {
 
 
    .win_content::before {
-      width: 100%;
+      width: 96%;
       height: 30%;
       top: 160px;
-      left: 5px;
+      left: 7px;
    }
 
    .prediction_container {
@@ -1092,7 +1094,6 @@ footer ul li a img {
 
    .footer-navigation_mobile {
       display: flex;
-      /* width: 80%; */
       width: 100%;
       height: 68px;
       justify-content: space-between;

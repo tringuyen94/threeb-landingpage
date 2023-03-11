@@ -36,7 +36,7 @@ const animation5 = bodymovin.loadAnimation({
 
 const bottomNavigate = document.getElementsByClassName('footer-navigation_mobile')[0]
 window.addEventListener('scroll', (e) => {
-   if (window.scrollY > 4200) {
+   if (window.scrollY > 4280) {
       bottomNavigate.style.position = 'relative'
    } else {
       bottomNavigate.style.position = 'fixed'
