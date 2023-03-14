@@ -132,12 +132,18 @@ ANIMATION
    height: 24px;
 }
 
-.account button {
+.btn-login {
    margin-left: 40px;
    border: 1px solid #33C1FF;
    background: #F5FCFF;
    color: #33C1FF;
    border-radius: 12px;
+   transition: all .25s linear !important;
+}
+
+.btn-login:hover {
+   background-color: #33C1FF;
+   color: #FFFFFF;
 }
 
 /* 
