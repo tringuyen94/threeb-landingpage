@@ -1102,9 +1102,7 @@ footer ul li a img {
    /* 
       FOOTER
    */
-   footer {
-      display: none;
-   }
+
 
    .footer-navigation_mobile {
       display: flex;
